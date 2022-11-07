@@ -1,7 +1,7 @@
 #pragma once
 
 #include <QOpenGLBuffer>
-#include <QtGui/QOpenGLShaderProgram>
+#include <QOpenGLShaderProgram>
 
 class SSBO  {
 public:

@@ -1,6 +1,6 @@
 #pragma once
 
-#include <QtGui/QOpenGLShaderProgram>
+#include <QOpenGLShaderProgram>
 
 class FullscreenShader
 {

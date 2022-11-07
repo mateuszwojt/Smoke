@@ -1,7 +1,7 @@
 #pragma once
 
-#include <QtGui/QOpenGLBuffer>
-#include <QtGui/QOpenGLVertexArrayObject>
+#include <QOpenGLBuffer>
+#include <QOpenGLVertexArrayObject>
 
 class QOpenGLShaderProgram;
 

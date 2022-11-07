@@ -1,7 +1,7 @@
 #include "Renderer.hpp"
 
-#include <QtGui/QOpenGLFunctions>
-#include <QtGui/QOpenGLShaderProgram>
+#include <QOpenGLFunctions>
+#include <QOpenGLShaderProgram>
 #include <vector>
 
 QOpenGLBuffer Renderer::s_fullscreenPosAndUV_VBO

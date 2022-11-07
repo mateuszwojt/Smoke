@@ -1,5 +1,3 @@
-#pragma once
-
 #include "MyQuickFBO.hpp"
 #include "MyQuickFBORenderer.hpp"
 

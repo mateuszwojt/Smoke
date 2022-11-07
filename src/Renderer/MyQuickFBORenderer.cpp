@@ -1,9 +1,10 @@
 #include "MyQuickFBORenderer.hpp"
 
 #include "MyQuickFBO.hpp"
-#include <QtGui/QOpenGLFramebufferObject>
-#include <QtGui/QOpenGLFunctions>
+#include <QOpenGLFramebufferObject>
+#include <QOpenGLFunctions>
 #include <QtQuick/QQuickWindow>
+#include <QQuickOpenGLUtils>
 
 #include <algorithm>
 
@@ -114,7 +115,7 @@ MyQuickFBORenderer::render()
     _imageRenderer.render(w, h, data.data());
     _simulation.update();
     update();
-    _window.resetOpenGLState();
+    QQuickOpenGLUtils::resetOpenGLState();
 }
 
 QOpenGLFramebufferObject *

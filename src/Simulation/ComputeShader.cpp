@@ -2,12 +2,18 @@
 
 #include <QOpenGLFunctions>
 #include <QOpenGLFunctions_4_3_Core>
+#include <QOpenGLVersionFunctionsFactory>
 
 static QOpenGLFunctions_4_3_Core 
 *gl()
 {
-    return QOpenGLContext::currentContext()
-                           ->versionFunctions<QOpenGLFunctions_4_3_Core>();
+    QSurfaceFormat fmt;
+    fmt.setVersion(4,3);
+    fmt.setProfile(QSurfaceFormat::CompatibilityProfile);
+    fmt.setOptions(QSurfaceFormat::DeprecatedFunctions);
+    QSurfaceFormat::setDefaultFormat(fmt);
+
+    return QOpenGLVersionFunctionsFactory::get<QOpenGLFunctions_4_3_Core>(QOpenGLContext::currentContext());
 }
 
 void
